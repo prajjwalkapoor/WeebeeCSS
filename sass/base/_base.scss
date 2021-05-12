@@ -14,3 +14,8 @@ body {
   color: rgb(31, 31, 31);
   padding: 20px;
 }
+@media only screen and (max-width: 500px) {
+  body {
+    padding: 0px;
+  }
+}

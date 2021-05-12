@@ -31,6 +31,10 @@ body {
   color: #1f1f1f;
   padding: 20px; }
 
+@media only screen and (max-width: 500px) {
+  body {
+    padding: 0px; } }
+
 .h2-home {
   font-size: 1.9rem;
   font-weight: 700;
