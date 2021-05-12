@@ -25,7 +25,7 @@ html {
   font-size: 16px; }
 
 body {
-  font-family: "lato",  sans-serif;
+  font-family: "lato", sans-serif;
   /* font-size: 10px; */
   line-height: 1.7;
   color: #1f1f1f;
@@ -137,7 +137,11 @@ body {
     visibility: visible; }
 
 .codebox {
-  text-align: center; }
+  text-align: center;
+  width: auto; }
+
+.iframe-popup {
+  width: 20rem; }
 
 .hover-img-sec {
   background-color: #f7f7f7;
@@ -145,33 +149,22 @@ body {
   margin-bottom: 2rem;
   padding: 9rem 0 10rem 1.7rem; }
   .hover-img-sec .hover-img-sec-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
     padding: 1.3rem 1.3rem 8rem 1.3rem;
     margin-top: 2rem; }
     .hover-img-sec .hover-img-sec-box .div-p {
-      width: auto;
+      width: 40rem;
       padding: 0 2rem; }
       .hover-img-sec .hover-img-sec-box .div-p .h2-img-sec {
         letter-spacing: 2px;
         margin-bottom: 3rem; }
     .hover-img-sec .hover-img-sec-box .div-img {
-      position: relative;
       margin-top: 1.3rem; }
       .hover-img-sec .hover-img-sec-box .div-img .hover-img {
-        width: 50%;
-        position: absolute;
+        width: 37vw;
         transition: all 0.3s; }
-        .hover-img-sec .hover-img-sec-box .div-img .hover-img-1 {
-          left: 2rem;
-          top: -1.3rem; }
-        .hover-img-sec .hover-img-sec-box .div-img .hover-img-2 {
-          right: 2rem;
-          top: 1.3rem; }
-        .hover-img-sec .hover-img-sec-box .div-img .hover-img-3 {
-          left: 20%;
-          top: 5rem; }
         .hover-img-sec .hover-img-sec-box .div-img .hover-img:hover {
           transform: scale(1.04) translateY(-0.5rem);
           box-shadow: 0px 0px 27px 3px rgba(0, 0, 0, 0.67);
@@ -358,6 +351,21 @@ body {
       color: #bf00ff;
       cursor: pointer; }
 
+@media only screen and (max-width: 600px) {
+  .hover-img-sec-box .div-img .hover-img {
+    width: 60vw; }
+  .features-sec {
+    padding: 15rem 0 50rem 0; }
+  .pricing-sec {
+    margin-top: -52rem; }
+  .sec-testimonial {
+    padding: 15rem 0 50rem 0;
+    margin-top: -15rem; }
+  .footer {
+    margin-top: -40rem;
+    padding-bottom: 0;
+    margin-bottom: 0; } }
+
 .header {
   height: 95vh;
   width: auto;
@@ -383,10 +391,10 @@ body {
     .header .header-text-box .heading-primary {
       color: #ffffff; }
       .header .header-text-box .heading-primary .heading-primary-main {
-        font-family: 'Righteous', cursive;
+        font-family: "Righteous", cursive;
         display: block;
-        letter-spacing: 0.5rem;
-        font-size: 4rem;
+        letter-spacing: 0.3rem;
+        font-size: 3.2rem;
         font-weight: 400;
         animation-name: moveInLeft;
         animation-duration: 0.5s; }
@@ -418,13 +426,33 @@ body {
       background-color: transparent;
       border: 2px solid #ffffff;
       color: #ffffff; }
-    .header .header-text-box .btn:active, .header .header-text-box .btn:focus {
+    .header .header-text-box .btn:active,
+    .header .header-text-box .btn:focus {
       outline: none;
       transform: translateY(-1px);
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
+@media only screen and (min-width: 500px) {
+  .iframe-png {
+    display: none; } }
+
+@media only screen and (max-width: 500px) {
+  .heading-primary-main {
+    font-size: 2.5rem; }
+  .heading-primary-sub {
+    font-size: 1.2rem; }
+  .popup .iframe-popup {
+    display: none; }
+  .popup .iframe-png {
+    width: 90%; }
+  .popup h2 {
+    margin-top: 5rem; }
+  .popup .btn {
+    font-size: 1rem; } }
+
 .navigation-checkbox {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .navigation-button {
   background-color: #ffffff;
@@ -457,6 +485,7 @@ body {
   right: 0;
   z-index: 1500;
   transition: all 0.4s;
+  display: none;
   opacity: 0;
   width: 0; }
   .navigation .nav-list {
@@ -487,6 +516,7 @@ body {
 
 .navigation-checkbox:checked ~ .nav {
   opacity: 1;
+  display: inline;
   width: 100%; }
 
 .navigation-icon {
@@ -503,15 +533,15 @@ body {
     position: absolute;
     left: 0; }
   .navigation-icon::before {
-    top: .6rem; }
+    top: 0.6rem; }
   .navigation-icon::after {
     top: 1.2rem; }
 
 .navigation-button:hover .navigation-icon {
-  top: .4rem; }
+  top: 0.4rem; }
 
 .navigation-button:hover .navigation-icon::before {
-  top: .5rem; }
+  top: 0.5rem; }
 
 .navigation-button:hover .navigation-icon::after {
   top: 1rem; }

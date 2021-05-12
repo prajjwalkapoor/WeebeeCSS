@@ -1,83 +1,117 @@
 .header {
-    height: 95vh;
-    width: auto;
-    background-image: linear-gradient(to right bottom,rgba($dark-purple,0.8),rgba($lite-purple,0.8)), url(../img/hero.jpg);
-    background-size: cover;
-    background-position: left;
-    background-repeat: no-repeat;
-    clip-path: polygon(0 0, 100% 0, 100% 80%,0 95%);
-    position: relative;
+  height: 95vh;
+  width: auto;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($dark-purple, 0.8),
+      rgba($lite-purple, 0.8)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 95%);
+  position: relative;
 
-    .logo-box{
-        position: absolute;
-        width:  10rem;
-        height: 10rem;
-        .logo{
-            padding: 10%;
-            height: 90%;
-        }
+  .logo-box {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    .logo {
+      padding: 10%;
+      height: 90%;
     }
-    .header-text-box{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-        text-align: center;
-        .heading-primary{
-            color: $white;
-            .heading-primary-main{
-                font-family: 'Righteous', cursive;
-                display: block;
-                letter-spacing: 0.5rem;
-                font-size: 4rem;
-                font-weight: 400;
-                animation-name: moveInLeft;
-                animation-duration: 0.5s;
-            }   
-            .heading-primary-sub{
-                display: block;
-                font-weight: 400;
-                font-size:1.7rem;
-                margin-bottom: 0.4rem;
-                animation-name: moveInRight;
-                animation-duration: 0.5s;
-            }
-        }
-        p {
-            color:$white;
-            margin-bottom: 1.7rem;
-            padding: 0 2rem;
-            font-size: 1.1rem;
-            animation-name: moveInUp;
-            animation-duration: 0.5s;
-            animation-delay: 0.1s;
-        }
-        
-        .btn:link {
-            text-decoration: none;
-            border-radius: 100px;
-            font-size: 1.2rem;
-            transition: all 0.2s;
-        }
-        
-        .btn-white{
-            background-color:$white;
-            color: $dark-purple; 
-            padding: 18px 50px;
-        }
-        .btn:hover{
-            background-color: transparent;
-            border:2px solid $white; 
-            color: $white;
-        
-        }
+  }
+  .header-text-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    .heading-primary {
+      color: $white;
+      .heading-primary-main {
+        font-family: "Righteous", cursive;
+        display: block;
+        letter-spacing: 0.3rem;
+        font-size: 3.2rem;
+        font-weight: 400;
+        animation-name: moveInLeft;
+        animation-duration: 0.5s;
+      }
+      .heading-primary-sub {
+        display: block;
+        font-weight: 400;
+        font-size: 1.7rem;
+        margin-bottom: 0.4rem;
+        animation-name: moveInRight;
+        animation-duration: 0.5s;
+      }
+    }
+    p {
+      color: $white;
+      margin-bottom: 1.7rem;
+      padding: 0 2rem;
+      font-size: 1.1rem;
+      animation-name: moveInUp;
+      animation-duration: 0.5s;
+      animation-delay: 0.1s;
+    }
 
-        .btn:active, .btn:focus {
-        outline: none;
-        transform: translateY(-1px);
-        box-shadow: 0 0.5rem 1rem rgba($black, 0.2); 
-        }
+    .btn:link {
+      text-decoration: none;
+      border-radius: 100px;
+      font-size: 1.2rem;
+      transition: all 0.2s;
     }
+
+    .btn-white {
+      background-color: $white;
+      color: $dark-purple;
+      padding: 18px 50px;
+    }
+    .btn:hover {
+      background-color: transparent;
+      border: 2px solid $white;
+      color: $white;
+    }
+
+    .btn:active,
+    .btn:focus {
+      outline: none;
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba($black, 0.2);
+    }
+  }
 }
 
-//end     
+// media queries :
+@media only screen and (min-width: 500px) {
+  .iframe-png {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .heading-primary-main {
+    font-size: 2.5rem;
+  }
+  .heading-primary-sub {
+    font-size: 1.2rem;
+  }
+  .popup {
+    .iframe-popup {
+      display: none;
+    }
+    .iframe-png {
+      width: 90%;
+    }
+    h2 {
+      margin-top: 5rem;
+    }
+    .btn {
+      font-size: 1rem;
+    }
+  }
+}
+//end
