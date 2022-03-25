@@ -440,6 +440,13 @@ body {
   .iframe-png {
     display: none; } }
 
+@media only screen and (max-width: 650px) {
+  #footer-link-list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 @media only screen and (max-width: 500px) {
   .heading-primary-main {
     font-size: 2.5rem; }
@@ -560,4 +567,5 @@ body {
 
 .navigation-checkbox:checked + .navigation-button .navigation-icon::after {
   top: 0;
-  transform: rotate(-45deg); }
+  transform: rotate(-45deg); 
+}
